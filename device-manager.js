@@ -16,6 +16,29 @@ function DeviceManager() {
  * Get product model
  * @param {string} Product model
  */
+DeviceManager.prototype.getProductsModel =  function (callback) {
+
+    mongoose.connect(mongo_url, function (err) {
+        logger.info("DeviceManager::getProductsModel : 03");
+        if (err) return callback(new IllegalArgumentError('Product model não encontrado.'));
+        var query = ProductModel.find({});
+        query.sort('-trade');
+
+        query.exec(function (err, products) {
+            logger.info("DeviceManager::getProductsModel : 05");
+        if (err) return callback(new IllegalArgumentError('Product model não encontrado.'));
+        logger.info("DeviceManager::getProductsModel : 06");
+            mongoose.disconnect();
+            logger.info("DeviceManager::getProductsModel : 07");
+            callback(null, products);
+        });
+    });
+};
+
+/**
+ * Get product model
+ * @param {string} Product model
+ */
 DeviceManager.prototype.getProductModel =  function (_bar_code, callback) {
 logger.info("DeviceManager::getProductModel : "+_bar_code);
     if (!_bar_code) {
@@ -31,7 +54,7 @@ logger.info("DeviceManager::getProductModel : 02");
 logger.info("DeviceManager::getProductModel : 04");
         query.exec(function (err, product) {
             logger.info("DeviceManager::getProductModel : 05");
-        if (err) return callback(new IllegalArgumentError('Product model não encontrado.'));
+        if (err) return callback(new IllegalArgumentError('Products model não encontrado.'));
             mongoose.disconnect();
             callback(null, product);
         });
