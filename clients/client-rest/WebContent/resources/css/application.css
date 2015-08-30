@@ -1,0 +1,81 @@
+/* CLASS */
+.component_status_row_0{background-color: #7efba7 !important;} /* ACTIVE */
+.component_status_row_1{background-color: #f5f79c !important;} /* INACTIVE */
+.component_status_row_2{background-color: #4dc1f9 !important;} /* NEW */
+.component_status_row_3{background-color: #FBCBCB !important;} /* DEPRECATED */
+.component_status_row_4{background-color: #FAFBCB !important;} /* RESTRICT */
+
+.delta_row_0{background-color: #caf9fb !important;}
+.delta_row_1{background-color: #cbcafb !important;}
+.delta_row_2{background-color: #FAFBCB !important;}
+.delta_row_3{background-color: #FBCBCB !important;}
+.delta_row_4{background-color: #FAFBCB !important;}
+
+.component_status_warning{background-color: #FAFBCB !important;}
+.component_status_warning_red{background-color: #FBCBCB !important;}
+.history_bom_gray{background-color: #C0C0C0 !important;}
+.text-align-right{text-align: right;}
+.text-align-left{text-align: left;}
+.text-align-center{text-align: center;}
+.text-padding-left-1{padding-left: 0px}
+.text-padding-left-2{padding-left: 15px}
+.text-padding-left-3{padding-left: 30px}
+.text-padding-left-4{padding-left: 45px}
+.sub-table-component{text-align:center;padding: 5px 0 5px 0;}
+.width-100{width: 100%}
+.float-right{float: right;}
+.color-red{background-color: #FBCBCB !important;}
+.color-blue{background-color: #CBE3FB !important;}
+.width-100-px{width:100px}
+.scroll-result {width: 1196px;height: auto;overflow: auto;margin: 0px; padding: 0px}
+.scroll-result-modal {width: 100%;height: 300px; min-height:288px; overflow: auto;margin: 0px; padding: 0px}
+.result-table  {width: 100%;height: auto;min-width: 1200px;}
+.result-table-count-header  {font-weight: bold; text-align: center}
+.group-select-type-find {background-color: #cfcfcf;height: 28px;text-align: left !important;padding-top: 10px;padding-bottom: 10px}
+.alert-new-pn{ color:red;font-weight:bold;padding:5px}
+.alert-without-demand{ color:#fb720a;font-weight:bold;padding:5px}
+.page-sub-title-label {font-size: medium;font-variant: small-caps;color: #004990;}
+.page-small-title-label {font-size: small;font-variant: small-caps;color: #004990;}
+.field-label-pn {color: #5b5b5b;font-size: 18px;font-weight: bold;text-align: center;}
+.panel-button-bar {background-color: #cfcfcf; height: 40px; text-align: right;}
+
+/* PROGRESS */
+.progress .progress-ball-gray {background:url(../resources/images/miscellaneous/progress/progress-ball-gray.png) repeat-x;float: left;width: 13px;height: 12px;vertical-align: middle;}
+.progress .progress-ball-green {background:url(../resources/images/miscellaneous/progress/progress-ball-green.png) repeat-x;float: left;width: 13px;height: 12px;vertical-align: middle;}
+.progress .label-green {font-size: 15px;color: #58a35a;font-weight: bold;}
+.progress .label-gray {font-size: 15px;color: #7a7a7a;font-weight: bold;}
+
+/* BUTTON */
+.btn-revision {background:url(../../ButtonServlet?w=187&h=32&ico=/resources/images/portal/icons/small/ico-revision.png) !important;width: 181px;height: 32px;}
+.btn-add-pci {background:url(../../ButtonServlet?w=110&h=32&ico=/resources/images/portal/icons/larger/ico-pci-add.png) !important;width: 104px;height: 32px;}
+.btn-add {background:url(../../ButtonServlet?w=110&h=32&ico=/resources/images/portal/icons/larger/ico-add.png) !important;width: 104px;height: 32px;}
+.btn-create-material {background:url(../../ButtonServlet?w=110&h=32&ico=/resources/images/portal/icons/small/ico-create-pn-material.png) !important;width: 104px;height: 32px;}
+.btn-bom-finished {background:url(../../ButtonServlet?w=144&h=32&ico=/resources/images/portal/icons/larger/ico-bom-finished.png) !important;width: 138px;height: 32px;}
+.btn-create-bom {background:url(../../ButtonServlet?w=171&h=32&ico=/resources/images/portal/icons/small/ico-bom-register.png) !important;width: 165px;height: 32px;}
+.btn-add-165 {background: url("../../ButtonServlet?w=171&h=32&ico=/resources/images/portal/icons/larger/ico-add.png") repeat scroll 0 0 transparent !important;height: 32px;width: 165px;}
+.btn-add-180 {background: url("../../ButtonServlet?w=187&h=32&ico=/resources/images/portal/icons/larger/ico-add.png") repeat scroll 0 0 transparent !important;height: 32px;width: 181px;}
+.btn-add-200 {background: url("../../ButtonServlet?w=201&h=32&ico=/resources/images/portal/icons/larger/ico-add.png") repeat scroll 0 0 transparent !important;height: 32px;width: 195px;}
+.btn-select-project {background: url("../../ButtonServlet?w=201&h=32&ico=/resources/images/portal/icons/larger/ico-add.png") repeat scroll 0 0 transparent !important;height: 32px;width: 195px;}
+.btn-search-200 {background: url("../../ButtonServlet?w=201&h=32&ico=/resources/images/template/icons/ico-search.png") repeat scroll 0 0 transparent !important;height: 32px;width: 195px;}
+.btn-diff {background: url("../../ButtonServlet?w=221&h=32&ico=/resources/images/portal/icons/small/ico-diff.png") repeat scroll 0 0 transparent !important;height: 32px;width: 215px;}
+.btn-options-param-add {background:url(../../ButtonServlet?w=110&h=32&ico=/resources/images/portal/icons/larger/ico-options-param.png) !important;width: 104px;height: 32px;}
+.btn-check {background:url(../../ButtonServlet?w=110&h=32&ico=/resources/images/portal/icons/larger/ico-check.png) !important;width: 104px;height: 32px;}
+.btn-submit-acq {background: url("../../ButtonServlet?w=187&h=32&ico=/resources/images/portal/icons/small/ico-sumbmit-acq.png") repeat scroll 0 0 transparent !important;height: 32px;width: 181px;}
+.btn-submit {background: url("../../ButtonServlet?w=110&h=32&ico=/resources/images/portal/icons/small/ico-sumbmit-acq.png") repeat scroll 0 0 transparent !important;height: 32px;width: 104px;}
+.btn-submit-project {background: url("../../ButtonServlet?w=187&h=32&ico=/resources/images/portal/icons/small/ico-project-submit.png") repeat scroll 0 0 transparent !important;height: 32px;width: 140px;}
+.btn-analysis-purchasing {background: url("../../ButtonServlet?w=156&h=32&ico=/resources/images/portal/icons/larger/ico-analysis-purchasing.png") repeat scroll 0 0 transparent !important;height: 32px;width: 150px;}
+.btn-graph {background: url("../../ButtonServlet?w=170&h=32&ico=/resources/images/template/icons/ico-graph.png") repeat scroll 0 0 transparent !important;height: 32px;width: 170px;}
+.btn-action-approve {background: url("../../ButtonServlet?w=130&h=32&ico=/resources/images/portal/icons/small/ico-action-approve.png") repeat scroll 0 0 transparent !important;height: 32px;width: 130px;}
+.btn-action-reprove {background: url("../../ButtonServlet?w=130&h=32&ico=/resources/images/portal/icons/small/ico-action-reprove.png") repeat scroll 0 0 transparent !important;height: 32px;width: 130px;}
+.btn-confirm {background: url("../../ButtonServlet?w=125&h=32&ico=/resources/images/template/icons/ico-success.png") repeat scroll 0 0 transparent !important; width: 125px; height: 32px; float: right;}
+.btn-cancel-recommended-action {background:url(../../ButtonServlet?w=150&h=32&ico=/resources/images/template/icons/ico-cancel.png) !important;width: 144px;height: 32px;}
+.btn-finish-recommended-action {background:url(../../ButtonServlet?w=150&h=32&ico=/resources/images/template/icons/ico-save.png) !important;width: 144px;height: 32px;}
+.btn-generate-document {background:url(../../ButtonServlet?w=180&h=32&ico=/resources/images/portal/icons/small/ico-acrobat-reader.png) !important;width: 174px;height: 32px;}
+/*PAGE CONTENT*/
+div#content .panel-form{margin: 0}	
+	div#content table#panel-feature-component .column-70 {width: 70px}
+	div#content table#panel-feature-component .column-80 {width: 80px}
+	div#content table#panel-feature-component .column-padding-left-10 {width: 10px; padding-left: 36px}
+	div#content table#panel-feature-component .column-10 {width: 10px;}
+	div#content table#panel-feature-component .column-30 {width: 30px}
+	div#content table#panel-feature-component .column-150 {width: 150px}

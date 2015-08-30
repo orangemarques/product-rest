@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:f="http://java.sun.com/jsf/core"
+		xmlns:ui="http://java.sun.com/jsf/facelets"
+		xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+		xmlns:c="http://java.sun.com/jsp/jstl/core"
+		xmlns:a4j="http://richfaces.org/a4j"
+		xmlns:rich="http://richfaces.org/rich"
+		xmlns:richext="http://java.sun.com/jsf/composite/richext">
+	<ui:composition template="/templates/template-application.xhtml">
+		
+		<ui:define name="js-content-application">	
+		</ui:define>
+		
+		<ui:define name="title-page-icon">		
+			<h:graphicImage alt="#{message.label_produtos}" value="/resources/images/large/ico-familia-produto.png" />
+		</ui:define>
+		
+		<ui:define name="title-page-title">
+			<h:outputText value="#{message.label_produtos}" />	
+		</ui:define>		
+				
+		
+		<ui:define name="content-application">	
+			
+			<rich:panel id="panel-form" styleClass="panel-form" >
+				<f:facet name="header">
+					<h:outputText value="#{message.label_produtos}" />
+				</f:facet>			
+				<richext:spacer height="5" />
+				<hr class="title-page-ruler"/>
+				<richext:spacer height="5" />
+				<rich:messages layout="list" errorClass="msg-error" warnClass="msg-warn" infoClass="msg-success" globalOnly="false">
+	        		<f:facet name="infoMarker">
+		            	<h:graphicImage width="16px" height="16px" value="/resources/images/template/ico-success.png" /> 
+   				    </f:facet>
+		            <f:facet name="warnMarker">
+       					<h:graphicImage width="16px" height="16px" value="/resources/images/template/ico-warning.png" /> 
+		            </f:facet>
+		            <f:facet name="errorMarker">
+       					<h:graphicImage width="16px" height="16px" value="/resources/images/template/ico-error.png" />  
+		            </f:facet>
+				</rich:messages>
+										
+				<richext:spacer height="5" />
+				<hr class="title-page-ruler"/>
+				<richext:spacer height="5" />
+						
+				<h:outputText styleClass="field-label-subtitle" value="#{message.label_pesquisar}" />
+						
+				<h:panelGrid id="panel-produto-pesquisa" cellpadding="10" cellspacing="0" columns="2">
+					<h:outputLabel value="#{message.label_barcode}:" />
+					<h:inputText id="nomeProdutoPesquisa" value="#{produtoController.nome}" styleClass="field-input-text" maxlength="#{cfg.f8_produto_nome_field_max_lenght}" style="width: 300px;"/>
+													
+				</h:panelGrid>
+						
+				<h:panelGroup layout="block">
+					<a4j:commandButton render=":panel-produto-pesquisa" value="#{message.label_limpar}" actionListener="#{produtoController.clearFieldSearchActionListener}" />
+					<richext:spacer width="5" />
+					<a4j:commandButton render=":dtResultado" value="#{message.label_pesquisar}" actionListener="#{produtoController.listActionListener}" />
+				</h:panelGroup>
+						
+				<richext:spacer height="5" />
+				<hr class="title-page-ruler"/>
+				<richext:spacer height="5" />
+												
+				<rich:dataTable id="dtResultado" style="width: 100%;" border="0" var="item" value="#{produtoController.produtos}"
+					onrowmouseover="this.style.backgroundColor='#F1F1F1'"
+					onrowmouseout="this.style.backgroundColor='#{a4jSkin.tableBackgroundColor}'" rows="20">
+					<f:facet name="header">
+						<h:outputLabel value="#{message.label_total_encontrado} : #{produtoController.totalEncontrado}"></h:outputLabel>
+					</f:facet>
+					
+					<rich:column styleClass="text-align-center" >
+						<f:facet name="header">
+	                		<h:outputText value="#{message.label_nome}" />
+	            		</f:facet>	
+	            		<h:outputText value="#{item.nome}" />
+					</rich:column>
+							
+					<rich:column styleClass="text-align-center" >
+						<f:facet name="header">
+	                		<h:outputText value="#{message.label_barcode}" />
+	            		</f:facet>	
+	            		<h:outputText value="#{item.barcode}" />
+					</rich:column>
+							
+					<rich:column styleClass="text-align-center" >
+						<f:facet name="header">
+	                		<h:outputText value="#{message.label_loja}" />
+	            		</f:facet>	
+	            		<h:outputText value="#{item.loja}" />
+					</rich:column>
+					
+					<rich:column styleClass="text-align-center" >
+						<f:facet name="header">
+	                		<h:outputText value="#{message.label_preco}" />
+	            		</f:facet>	
+	            		<h:outputText value="#{item.preco}" />
+					</rich:column>
+								
+					<f:facet name="footer">
+                		<rich:dataScroller maxPages="20" />
+            		</f:facet>	
+  				</rich:dataTable>				
+					
+				<richext:spacer height="5" />
+				<hr class="title-page-ruler"/>
+				<richext:spacer height="5" />	
+						
+			</rich:panel>			
+		
+		</ui:define>	
+
+		<ui:define name="modal-panel">			
+		</ui:define>
+
+	</ui:composition>
+</html>

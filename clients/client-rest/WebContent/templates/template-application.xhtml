@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:f="http://java.sun.com/jsf/core"
+		xmlns:ui="http://java.sun.com/jsf/facelets"
+		xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+		xmlns:c="http://java.sun.com/jsp/jstl/core"
+		xmlns:a4j="http://richfaces.org/a4j"
+		xmlns:rich="http://richfaces.org/rich"
+		xmlns:richext="http://java.sun.com/jsf/composite/richext">
+
+	<ui:composition template="/templates/template.xhtml">
+		
+		<ui:define name="js-content">
+			<ui:insert name="js-content-application"></ui:insert>
+		</ui:define>	
+		
+		<ui:define name="css-content">		
+			<h:outputStylesheet library="css" name="application.css" />
+			<ui:insert name="css-content-application"></ui:insert>
+		</ui:define>
+				
+		<ui:define name="content">
+			<!-- loading -->
+			<a4j:status id="waitStatus" onstart="jQuery('#loading').show();" onstop="jQuery('#loading').hide();"/>
+		    <h:panelGroup id="loading" styleClass="loading-container" style="display: none" layout="block">			    	
+		    	<h:panelGroup styleClass="loading-wrap" layout="block">
+		    		<h:panelGroup styleClass="loading-content" layout="block">
+		    			<h:graphicImage  value="/resources/images/template/ajax_loading.gif" alt="#{message.label_process}"/>
+		    			<richext:spacer width="4"/>
+		    			<h:outputText value="  #{message.label_please_wait}"/>
+		    		</h:panelGroup>
+		    		<h:panelGroup styleClass="loading-mask" layout="block"></h:panelGroup>
+		    	</h:panelGroup>
+		    </h:panelGroup>	
+		    <!-- main -->
+			<h:panelGroup id="title-page-container" styleClass="title-page-container" layout="block">
+				<ui:insert name="title-page-icon"></ui:insert>
+				<h:panelGroup styleClass="title-page-title"><ui:insert name="title-page-title"></ui:insert></h:panelGroup>
+				<hr class="title-page-ruler"/>	
+			</h:panelGroup>
+			<h:panelGroup id="page-container" styleClass="page-container" layout="block">
+				<h:form id="formMain" prependId="false">
+					<ui:insert name="content-application"></ui:insert>
+				</h:form>
+			</h:panelGroup>
+			<ui:insert name="modal-panel"></ui:insert>
+		</ui:define>	
+	</ui:composition>
+</html>
