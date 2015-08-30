@@ -1,0 +1,130 @@
+body {margin: 0;padding: 0;background-color: #dedede;font-size:13px;color:#FFF;font-family:Calibri, Helvetica, Arial !important;}
+img{border:0;vertical-align: middle;}
+p{line-height:16px}
+a{color:#000}
+a:hover{color:#000}
+input[type="text"]:focus, input[type="password"]:focus {border: 1px solid #4D90FE !important;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) inset;outline: medium none;}
+
+.wrap{margin:0 auto;}
+
+.loading-container {height: 0;position: fixed;text-align: center;top: 0;width: 100%;z-index: 1000;}
+.loading-mask{width: 100%;background-color: #D0D0D0; filter: alpha(opacity=50); opacity: .5;border: 0 none;height: 100%;left: 0;margin: 0;padding: 0;position: fixed;top: 0;z-index: -1}
+.loading-wrap{display: inline-block;padding-bottom: 5px;}
+.loading-content {-moz-transition: opacity 0.218s ease 0s;border-width: 1px;height: 30px;width:200px;padding: 6px 16px;background-color: #F9EDBE;border-color: #F0C36D;color: #333333;border-radius: 2px 2px 2px 2px;border-style: solid;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);font-size: 18px;overflow: hidden;padding: 0;text-align: center;}
+
+/* Class*/
+.ui-input-invalid {background-color:red}
+.padding-5{padding: 5px 5px 5px 5px;}
+.group-button {background-color: #cfcfcf;height: 40px;text-align: right;padding-top: 10px;padding-bottom: 10px}
+.group-button-left {background-color: #cfcfcf;height: 40px;text-align: left;padding-top: 10px;padding-bottom: 10px}
+
+/* Message */
+.msg-error{border:0px; background-color:#FFEFEF; padding:5px; color:#900 !important;text-align:left;font-weight: bold;}
+.msg-success{border:0px; background-color:#F3FFEF; padding:5px; color:#447F17 !important;text-align:left;font-weight: bold;}
+.msg-warn{border:0px; background-color:#FDFECA; padding:5px; color:#d4a844 !important;text-align:left;font-weight: bold;}
+.msg-error-login{ color:red;font-weight:bold;padding:5px}
+.msg-success-login{ color:#090;background:#FFF;font-weight:bold;padding:5px}
+.msg-access-denied{border:0px; background-color:#FFEFEF; padding:5px; color:#900 !important;text-align:left;font-weight: bold;font-size: 18px}
+/* Field */
+
+/* Column PaneGrid */
+.right-column-50{text-align: right; width: 50%;}
+.left-column-50{text-align: left; width: 50%;}
+.center-column{text-align: center;}
+
+.btn-default {height: 16px;}
+
+.field-input-text {height: 14px; font-size: 14px;}
+.field-input-text-45 {border: 1px solid #a2a2a2;width: 45px;color: #87abff;font-size: 15px;font-weight: bold;text-align: center;}
+.field-input-text-25 {border: 1px solid #a2a2a2;width: 25px;color: #87abff;font-size: 15px;font-weight: bold;text-align: center;}
+.field-input-text-70 {border: 1px solid #a2a2a2;width: 70px;color: #87abff;font-size: 15px;font-weight: bold;}
+.field-input-text-205 {border: 1px solid #a2a2a2;width: 205px;color: #87abff;font-size: 15px;font-weight: bold;}
+.field-input-text-300 {border: 1px solid #a2a2a2;width: 300px;}
+.field-input-text-450 {border: 1px solid #a2a2a2;width: 450px;}
+.field-input-text-529 {border: 1px solid #a2a2a2;width: 529px;}
+.field-input-textarea-450 {border: 1px solid #a2a2a2;width: 450px;height: 80px;}
+.field-input-textarea-500 {border: 1px solid #a2a2a2;width: 500px;height: 80px;}
+.field-select-many-205 {border: 1px solid #a2a2a2;width: 205px;height: 80px;}
+.field-label {color: #5b5b5b;font-size: 14px;font-weight: normal;text-align: right;}
+.field-label-14 {font-size: 14px; color: #AD0808;}
+.field-label-left-menu {color: #FFFFFF;font-size: 12px;font-weight: normal;text-align: right;}
+.field-label-required {color: #5b5b5b;font-size: 14px;font-weight: bold;text-align: right;}
+.field-label-subtitle {font-size: 18px;font-variant: small-caps;color: #004990;font-weight: bold;}
+.field-label-12 {color: #5b5b5b;font-size: 12px;font-weight: normal;text-align: right;}
+.field-label-18 {font-size: 18px;font-variant: small-caps;color: #5b5b5b;font-weight: bold;}
+.field-label-inplace {font-size: 18px;font-variant: small-caps;color: #5b5b5b;font-weight: bold;background: transparent !important; border-bottom-style:none;}
+.field-label-inplace-hover {font-size: 18px;font-variant: small-caps;color: #5b5b5b;font-weight: bold;background-color :orange !important;}
+
+/* Button */
+.btn-default {border: 0px;cursor: pointer;font-weight: bold !important;font-size: 13px !important;font-variant: small-caps; text-transform: uppercase !important;text-align: left;padding-left:  35px !important;color: #5b5b5b!important;margin:5px!important;}
+.btn-search {background:url(../../ButtonServlet?w=110&h=32&ico=/resources/images/template/icons/ico-search.png) !important;width: 104px;height: 32px;}
+.btn-export-excel {background:url(../../ButtonServlet?w=110&h=32&ico=/resources/images/template/icons/ico-export-excel.png) !important;width: 104px;height: 32px;}
+.btn-export-txt {background:url(../../ButtonServlet?w=121&h=32&ico=/resources/images/template/icons/ico-export-txt.png) !important;width: 114px;height: 32px;}
+.btn-empty {background:url(../../ButtonServlet?w=110&h=32&ico=/resources/images/template/icons/ico-empty.png) !important;width: 104px;height: 32px;}
+.btn-save {background:url(../../ButtonServlet?w=110&h=32&ico=/resources/images/template/icons/ico-save.png) !important;width: 104px;height: 32px;}
+.btn-cancel {background:url(../../ButtonServlet?w=110&h=32&ico=/resources/images/template/icons/ico-cancel.png) !important;width: 104px;height: 32px;}
+.btn-close {background:url(../../ButtonServlet?w=110&h=32&ico=/resources/images/template/icons/ico-close-modal-btn.png) !important;width: 104px;height: 32px;}
+.btn-remove {background:url(../../ButtonServlet?w=110&h=32&ico=/resources/images/template/icons/ico-remove.png) !important;width: 104px;height: 32px;}
+.btn-send-mail {background:url(../../ButtonServlet?w=110&h=32&ico=/resources/images/template/icons/ico-send-mail.png) !important;width: 104px;height: 32px;}
+.btn-previous {background:url(../../ButtonServlet?w=110&h=32&ico=/resources/images/template/icons/ico-previous.png) !important;width: 104px;height: 32px;}
+.btn-next {background:url(../../ButtonServlet?w=110&h=32&ico=/resources/images/template/icons/ico-next.png) !important;width: 104px;height: 32px;}
+.btn-disapprove {background:url(../../ButtonServlet?w=110&h=32&ico=/resources/images/template/icons/ico-disapprove.gif) !important;width: 104px;height: 32px;}
+.btn-approve {background:url(../../ButtonServlet?w=110&h=32&ico=/resources/images/template/icons/ico-approve.gif) !important;width: 104px;height: 32px;}
+.btn-inplace-save{background: url(../images/template/icons/ico-inplace-save.png) transparent !important;width: 15px; height: 15px}
+.btn-inplace-cancel{background: url(../images/template/icons/ico-inplace-cancel.png) transparent !important;width: 15px; height: 15px}
+.btn-20w-20h{width: 20px; height: 20px}
+.btn-16w-16h{width: 16px; height: 16px}
+.btn-activate{background:url(../../ButtonServlet?w=110&h=32&ico=/resources/images/template/icons/ico-activate.png) !important;width: 104px;height: 32px;}
+.btn-deactivate{background:url(../../ButtonServlet?w=110&h=32&ico=/resources/images/template/icons/ico-deactivate.png) !important;width: 104px;height: 32px;}
+
+/* Menu */
+.menu-header {width: 100%;height: 40px;background: url(../images/template/menu-header-bkg.png) repeat-x;color: #004990;}
+.logo-positron {background-position:-4px 0;width: 248px;height: 35px;float: left;background-position: left 50%;margin-top: 4px;margin-left: -6px;cursor: pointer;background: url(../images/template/logo-pst-eletronics.png) no-repeat 10px 10px;}
+.a{display:block;width: 248px;height: 35px;}
+.a:hover{background-position:-4px -16px}
+.title-separator {width: 6px;height: 40px;background: url(../resources/images/template/ico-menu-header-separator.png) no-repeat;float: left;}	
+.title-application-name {font-size: 28px;margin-left:20px;float: left;}	
+.box-login-data {float: right;margin-right: 10px}
+.title-label {font-size: 15px;}
+
+/* MENU Item */
+.menu-itens-panel {float: left;width: 85%;}
+.menu-item {width:200px;color: #474747;font-size: 13px;}
+.menu-item-parent {color: #FFFFFF;font-size: 16px;font-weight: normal;}
+.menu-item-home {color: #FFFFFF;font-size: 16px;font-weight: normal;font-family:Calibri, Helvetica, Arial !important;}
+/* Menu Bar*/
+.menu-bar {width: 100%;height: 40px;background: url(../images/template/menu-bar-bkg.png) repeat-x;color: #ffffff;}
+.menu-itens{width: 100%; float: left; height: 100%;margin-top:-4px}
+.menu-language{width: 10%; float: right; height: 100%;}	
+/* Content */
+.content {width: 100%;height: auto;background: url(../images/template/content-bkg.png) repeat-x;background-color: #dedede;padding-top: 20px}
+.box-center{text-align: center;}
+.title-page-container {margin: 32px}
+.title-page-ruler {width: 100%;border:#004990 1px solid;}
+.title-page-title {font-size: 28px;font-variant: small-caps;margin-left:20px;color: #004990;}
+.page-container{margin: 32px}
+.title-page-title {font-size: 28px;font-variant: small-caps;margin-left:20px;color: #004990;}
+
+/* Login */
+div#box-login {text-align:center;width: 500px;margin-left: auto;margin-right: auto;margin-top: 200px;background-color:white;}
+	div#box-login div#container-content {margin-left: 80px;padding-top: 10px;padding-bottom: 10px;}
+	div#box-login div#container-title {margin-left: 32px;margin-right: 32px;padding-top: 32px;}
+		div#box-login div#container-title .login-title {font-size: 28px;font-variant: small-caps;margin-left:20px;color: #004990;}
+		div#box-login div#container-title hr{width: 100%;border: 1px solid #004990;}
+		div#box-login div#box-create-alter-password {text-align: center;}
+		div#box-login div#box-create-alter-password a{color:#000;font-weight: bold;font-size: 14px;}
+		div#box-login .td-bkg-gray {background-color: #cfcfcf;height: 40px;text-align: right;}
+.btn-login {background-image: url(../images/large/ico-key.png);background-repeat: no-repeat;background-position: 5px;text-align: center;width: 150px;height: 32px;text-transform: none;}
+
+.pageDiv {width: 100%;height: 100%;font-family: Calibri, Helvetica, Arial;background: url(../images/template/pageBkg.png) repeat-x;background-color: #dedede;}
+.loginBox {width: 500px;margin-left: auto;margin-right: auto;margin-top: 100px;background-color: white;}
+.pageTitleContainer {margin-left: 32px;margin-right: 32px;padding-top: 32px;}
+.pageTitleLabel {font-size: 28px;font-variant: small-caps;margin-left:20px;color: #004990;}
+.pageTitleRuler {width: 100%;border: 1px solid #004990;}
+
+/* Home Item */		
+div.content-home {padding: 25px 15px 15px 15px;width: 100%;height: auto;min-height: 500px}
+	div.content-home div.content-home-column {float:left;width: 50%;height: auto;}
+	div.content-home div.content-home-row {width: 100%;height: auto;}
+	div.content-home div.content-home-row .title-page-ruler {width: 100%;border:#004990 1px solid;}
+	div.content-home div.content-home-row .title-page-title {font-size: 28px;font-variant: small-caps;margin-left:20px;color: #004990;}
