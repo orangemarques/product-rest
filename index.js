@@ -94,7 +94,7 @@ function setProductModel(req, res, next) {
     });
 }
 
-function setProductModel2(req, res, next) {
+function setProductBodyModel(req, res, next) {
     deviceManager.setProductModel(req.params.bar_code, req.params.product, req.params.trade, req.params.price, function (err, data) {
         if (err === null) {
             logger.info("[END] Produto criado: " + data);
@@ -124,8 +124,6 @@ var numCPUs = require('os').cpus().length;
 
 //Initialize the cluster
 if (cluster.isMaster) {
-    logger.info("CPUs = " + numCPUs + "\n");
-
     for (var i = 0; i < numCPUs; i++) {
         cluster.fork();
     }
@@ -137,7 +135,6 @@ if (cluster.isMaster) {
     cluster.on('disconnect', function (worker) {
         logger.error('worker ' + worker.process.pid + ' disconnected');
     });
-    logger.info("-------------\n");
 
 } else {
     //Initialize Rest Service
@@ -154,7 +151,7 @@ if (cluster.isMaster) {
     server.get('/api/v1/application/product/:bar_code?', getProductModel);
     server.get('/api/v1/application/products/', getProductsModel);
     server.post('/api/v1/application/product/', setProductModel);
-    server.post('/api/v1/application/product2/', setProductModel2);
+    server.post('/api/v1/application/product2/', setProductBodyModel); // added product by BODY - It is for HTML client only
 
     server.listen(process.env.ENGINE_PORT || 80, function () {
         logger.info('Servidor ProductREST rodando em: ' + server.url+ "\n");
