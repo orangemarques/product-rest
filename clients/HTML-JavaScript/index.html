@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Teste REST API - METHOD POST">
+    <meta name="author" content="Jucenildo Castro">
+
+    <title>POST - REST API</title>
+
+</head>
+
+<body>
+    <form action="http://192.168.173.1/api/v1/application/product2" target="process" method="POST">
+        <h1>Preencha o formulário abaixo e clique em salvar.</h1>
+        <table>
+            <tr>
+                <td>código de barras:</td><td><input name="bar_code" /></td>
+            </tr>
+            <tr>
+                <td>produto:</td><td><input name="product" /></td>
+            </tr>
+            <tr>
+                <td>estabelecimento:</td><td><input name="trade" /></td>
+            </tr>
+            <tr>
+                <td>preço:</td><td><input name="price" /></td>
+            </tr>
+            <hr/>
+            <tr>
+                <td><input type="submit" value="SALVAR" /></td>
+            </tr>
+        </table>
+        <hr/>
+        <textarea style="width:800px; height:300px" id="lista"></textarea>
+    </form>
+<script src="jquery-1.10.2.min.js"></script>
+<script>
+function update() {
+    $.ajax({
+        method: "GET",
+        dataType: 'jsonp',
+        url: "http://192.168.173.1/api/v1/application/products"
+    })
+    .done(function( msg ) {
+        var txt ="";
+        for( i = 0; i<msg.length; i++){
+            txt = txt+"produto: "+msg[i].bar_code+" - "+msg[i].product+" - "+msg[i].price+" - "+msg[i].trade+"\n";
+        }
+        $("#lista").val(txt);
+    });
+    }
+
+    // TODO: apenas para teste, melhorar para produção.
+    setInterval(update,1000);
+</script>
+
+<iframe id="process" name="process" style="width:0;height:0"></iframe>
+</body>
+
+</html>
